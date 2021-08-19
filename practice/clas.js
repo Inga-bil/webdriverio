@@ -1,4 +1,8 @@
-class Person{
+
+
+
+module.exports = class Person
+{
 
 
 
@@ -27,7 +31,7 @@ fullName()
 
 }
 
-let person = new Person("Tim", "Doe", 34);
+/*let person = new Person("Tim", "Doe", 34);
 let person1 = new Person("Inga", "Bilyk",32);
-console.log(person.age, person.location, person.fullName())
-console.log(person1.fullName())
+//console.log(person.age, person.location, person.fullName())
+console.log(person1.fullName()) */

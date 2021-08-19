@@ -64,8 +64,9 @@ console.log(multiEven);
 let totalScore = multiEven.reduce((sum, scor) => sum + scor, 0);
 console.log(totalScore);
 
-//we can write it in one single line
 
+//we can write it in one single line
+//create an array with even number of scores and multiply each number by 3 and sum them
 var score1 = [12,13,14,16]
 
 let newSumScore = score1.filter(score1 => score1%2 ==0).map(score1=>score1*3).reduce((sum, scr) => sum+scr,0);
