@@ -1,6 +1,8 @@
 describe('Ecommerce application', ()=>{
 
-    it('Login page title', () =>
+
+    
+    it('Login Fail page title', () =>
     {
         //webdriverIO code
         browser.url("https://the-internet.herokuapp.com/login")
@@ -31,7 +33,34 @@ describe('Ecommerce application', ()=>{
        browser.pause(3000)
        
 
+    }) 
+
+
+
+    it('Login Fail page title', () =>
+    {
+
+        browser.url("https://the-internet.herokuapp.com/login")
+
+        const username = $("#username");
+       username.setValue("tomsmith");
+       
+
+       const password = $("//*[@name = 'password']");
+       password.setValue("SuperSecretPassword!");
+
+       const login = $("//*[@type = 'submit']");
+       login.click();
+       
+       $("h4").getText()
+       expect($("h4")).toHaveTextContaining("Welcome to the Secure Area. When you are done click logout below.")
+       
+
+
+
     })
+    
+    
 
 
 
