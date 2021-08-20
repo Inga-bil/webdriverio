@@ -33,7 +33,7 @@ describe('Ecommerce application', ()=>{
        browser.pause(3000)
        
 
-    }) 
+    })  
 
 
 
@@ -59,6 +59,9 @@ describe('Ecommerce application', ()=>{
        link.waitForExist()
        expect(browser).toHaveUrlContaining("secure")
 
+       const success = $(".subheader");
+       console.log(success.getText() + "is the message that is shown when the user loged in")
+       browser.pause(3000)
 
 
     })
