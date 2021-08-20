@@ -54,7 +54,10 @@ describe('Ecommerce application', ()=>{
        
        $("h4").getText()
        expect($("h4")).toHaveTextContaining("Welcome to the Secure Area. When you are done click logout below.")
-       
+       //linkedText
+       const link = $("=Logout")
+       link.waitForExist()
+       expect(browser).toHaveUrlContaining("secure")
 
 
 
