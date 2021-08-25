@@ -1,7 +1,7 @@
 describe('Ecommerce application', ()=>{
 
   
-    it('Login Fail page title', () =>
+    xit('Login Fail page title', () =>
     {
         //webdriverIO code
         browser.url("https://the-internet.herokuapp.com/login")
@@ -36,7 +36,7 @@ describe('Ecommerce application', ()=>{
 
 
 
-    it('Login Success page title', () =>
+    xit('Login Success page title', () =>
     {
 
         browser.url("https://the-internet.herokuapp.com/login")
