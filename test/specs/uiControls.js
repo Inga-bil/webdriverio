@@ -1,3 +1,5 @@
+const expectchai = require('chai').expect
+
 describe('Ecommerce application', ()=>{
 
     it('IU Controls', () =>{
@@ -34,8 +36,10 @@ describe('Ecommerce application', ()=>{
         dropdown.selectByVisibleText('Consultant')
         dropdown.selectByIndex(0)
         //assertion
-        dropdown.getValue() //stud chail is one library which supports assertions(compares values and strings)
-        expect(dropdown.getValue()).
+        dropdown.getValue() 
+        //stud chail is one library which supports assertions(compares values and strings)
+        expectchai(dropdown.getValue()).to.equal("stud")
+        
 
         
        
