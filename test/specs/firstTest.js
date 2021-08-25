@@ -1,12 +1,11 @@
 describe('Ecommerce application', ()=>{
 
-
-    
+  
     it('Login Fail page title', () =>
     {
         //webdriverIO code
         browser.url("https://the-internet.herokuapp.com/login")
-        console.log(browser.getTitle())
+        //console.log(browser.getTitle())
        
 
         //check is the title is the one that we need (the correct one)
@@ -22,7 +21,7 @@ describe('Ecommerce application', ()=>{
        const login = $("//*[@type = 'submit']");
        login.click();
 
-       const errorMessage = $(".flash");
+       const errorMessage = $(".subheader");
        console.log (errorMessage.getText() + "is the message that is shown on the screen");
 
        //assersion on the text that is prsent on the screen to verify if it is the right text
@@ -37,7 +36,7 @@ describe('Ecommerce application', ()=>{
 
 
 
-    it('Login Fail page title', () =>
+    it('Login Success page title', () =>
     {
 
         browser.url("https://the-internet.herokuapp.com/login")
@@ -70,4 +69,5 @@ describe('Ecommerce application', ()=>{
 
 
 
-})
+})  
+
