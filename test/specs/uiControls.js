@@ -2,7 +2,7 @@ const expectchai = require('chai').expect
 
 describe('Ecommerce application', ()=>{
 
-    it('IU Controls', () =>{
+    xit('IU Controls', () =>{
 
         browser.url("https://www.rahulshettyacademy.com/loginpagePractise/")
 
@@ -39,11 +39,38 @@ describe('Ecommerce application', ()=>{
         dropdown.getValue() 
         //stud chail is one library which supports assertions(compares values and strings)
         expectchai(dropdown.getValue()).to.equal("stud")
-        
+    })
 
-        
-       
-       
+    xit('Dynamic dropdown controls',() =>{
+
+
+        browser.url("https://www.rahulshettyacademy.com/AutomationPractice/")
+
+        $("#autocomplete").setValue("ind")
+        browser.pause(2000)
+
+        let items = $$("[class='ui-menu-item'] div")
+       // for(var i = 0; i<items.length; i++)
+        //{
+        //    console.log(items[i].getText())
+        //}
+        const desiredLocator = items.filter(item => item.getText() === "Indonesia")
+        desiredLocator[0].click()
+        browser.pause(2000)
+
+    })
+
+    xit('Checkbox Identification', () => {
+
+        browser.url("https://www.rahulshettyacademy.com/AutomationPractice/")
+
+        const element = $$("input[type = 'checkbox']")
+        element[1].click()
+        console.log(element[1].isSelected())
+
+        browser.saveScreenshot("screenshot.png")
+
+
 
     })
 })
