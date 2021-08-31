@@ -32,7 +32,7 @@ describe('Windows and Frames Miscellanous', ()=>{
 
     })
 
-    it('Frames switch',()=>{
+    xit('Frames switch',()=>{
 
         browser.url("https://www.rahulshettyacademy.com/AutomationPractice/")
 
