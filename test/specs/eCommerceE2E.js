@@ -1,3 +1,5 @@
+const expectchai = require('chai').expect
+
 describe('Ecommerce Application', ()=>{
 
     it('End to End test', ()=>{
@@ -28,6 +30,18 @@ describe('Ecommerce Application', ()=>{
         const sumOfProducts = productPrices.map(productPrice =>parseInt(productPrice.getText().split(".")[1].trim()))
         .reduce((acc,price)=> acc+price, 0)
         console.log(sumOfProducts)
+        const totalValue = $("//h3/strong").getText()
+        const totalIntValue = parseInt(totalValue.split(".")[1].trim())
+        expectchai(sumOfProducts).to.equal(totalIntValue)
+
+        $(".btn-success").click()
+        $("#country").setValue("Unit")
+        $(".lds-ellipsis").waitForExist({reverse:true})
+        $("=United States of America").click()
+        $("input[type='submit']").click()
+        expect($(".alert-success")).toHaveTextContaining("Success")
+
+
 
         browser.pause(3000)
         
