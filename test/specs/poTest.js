@@ -1,15 +1,19 @@
-const loginPage = require('./pageObjects/loginPage')
-const LoginPage =  require ('./pageObjects/loginPage')
-const shopPage = require('./pageObjects/shop')
-const reviewPage = require('./pageObjects/reviewPage')
+const loginPage = require('../pageObjects/loginPage')
+const LoginPage =  require ('../pageObjects/loginPage')
+const shopPage = require('../pageObjects/shop')
+const reviewPage = require('../pageObjects/reviewPage')
 const expectchai = require('chai').expect
+const fs = require('fs')
+let credentials = JSON.parse(fs.readFileSync('test/testData/LoginTest.json'))
 
 describe('Page Object test', ()=>{
+    
 
-    xit('Login page', ()=>{
+    credentials.forEach( ({username, password})  =>{
+    it('Login page', ()=>{
 
         browser.url("https://www.rahulshettyacademy.com/loginpagePractise/")
-        loginPage.Login("rahulshettyacademy", "learning")
+        loginPage.Login(username, password)
         console.log(loginPage.alert.getText() + "is the text I am seeng on the screen")
 
         browser.waitUntil(()=>loginPage.signIn.getAttribute('value') === 'Sign In',
@@ -20,9 +24,9 @@ describe('Page Object test', ()=>{
         
 
 
-    })
+    })})
 
-    it('End to End test', ()=>{
+    xit('End to End test', ()=>{
 
         var products = ["Blackberry", "Nokia Edge"]
 
