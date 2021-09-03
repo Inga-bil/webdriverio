@@ -5,12 +5,13 @@ const reviewPage = require('../pageObjects/reviewPage')
 const expectchai = require('chai').expect
 const fs = require('fs')
 let credentials = JSON.parse(fs.readFileSync('test/testData/LoginTest.json'))
+let e2eCredentials = JSON.parse(fs.readFileSync('test/testData/e2eTest.json'))
 
 describe('Page Object test', ()=>{
     
 
     credentials.forEach( ({username, password})  =>{
-    it('Login page', ()=>{
+    xit('Login page', ()=>{
 
         browser.url("https://www.rahulshettyacademy.com/loginpagePractise/")
         loginPage.Login(username, password)
@@ -26,9 +27,13 @@ describe('Page Object test', ()=>{
 
     })})
 
-    xit('End to End test', ()=>{
 
-        var products = ["Blackberry", "Nokia Edge"]
+    e2eCredentials.forEach(({products})=>{
+
+    
+    it('End to End test', ()=>{
+
+        //var products = ["Blackberry", "Nokia Edge"]
 
         browser.url("https://www.rahulshettyacademy.com/loginpagePractise/")
 
@@ -52,5 +57,5 @@ describe('Page Object test', ()=>{
 
         browser.pause(3000)
 
-    })
+    })})
 })
