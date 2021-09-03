@@ -41,7 +41,7 @@ describe('Ecommerce application', ()=>{
         expectchai(dropdown.getValue()).to.equal("stud")
     })
 
-    xit('Dynamic dropdown controls',() =>{
+    it('Dynamic dropdown controls Smoke',() =>{
 
 
         browser.url("https://www.rahulshettyacademy.com/AutomationPractice/")

@@ -31,7 +31,7 @@ describe('Page Object test', ()=>{
     e2eCredentials.forEach(({products})=>{
 
     
-    it('End to End test', ()=>{
+    xit('End to End test', ()=>{
 
         //var products = ["Blackberry", "Nokia Edge"]
 

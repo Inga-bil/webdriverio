@@ -45,7 +45,7 @@ describe('Functional Testing on Application', ()=>{
 
     })
 
-    xit('Web Tables Filter Validations', () =>{
+    it('Web Tables Filter Validations Smoke', () =>{
 
         browser.url("https://rahulshettyacademy.com/seleniumPractise/#/offers")
 

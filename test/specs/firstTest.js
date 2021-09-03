@@ -1,7 +1,7 @@
 describe('Ecommerce application', ()=>{
 
   
-    xit('Login Fail page title', () =>
+    it('Login Fail page title-Smoke', () =>
     {
         //webdriverIO code
         browser.url("https://the-internet.herokuapp.com/login")
