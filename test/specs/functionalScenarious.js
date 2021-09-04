@@ -47,7 +47,7 @@ describe('Functional Testing on Application', ()=>{
 
     it('Web Tables Filter Validations Smoke', () =>{
 
-        browser.url("https://rahulshettyacademy.com/seleniumPractise/#/offers")
+        browser.url("/seleniumPractise/#/offers")
 
         $("input[type = 'search']").setValue("tomato")
         //collect the elements provided in this filter

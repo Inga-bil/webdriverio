@@ -1,7 +1,20 @@
 describe('Ecommerce application', ()=>{
 
+    it('Login page title', function()
+    {
+        this.retries(2)
+        //webdriverIO code
+        browser.url("https://the-internet.herokuapp.com/login")
+        //console.log(browser.getTitle())
+       
+
+        //check is the title is the one that we need (the correct one)
+       expect(browser).toHaveTitleContaining("The Internet")
+    })
+
+
   
-    it('Login Fail page title-Smoke', () =>
+    xit('Login Fail page title Smoke', () =>
     {
         //webdriverIO code
         browser.url("https://the-internet.herokuapp.com/login")

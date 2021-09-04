@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1630717153740' stop='1630717153741'>
+    <name>Ecommerce application</name>
+    <title>Ecommerce application</title>
+    <test-cases>
+        <test-case start='1630717153740' status='pending' stop='1630717153740'>
+            <name>IU Controls</name>
+            <title>IU Controls</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

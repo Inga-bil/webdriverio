@@ -20,6 +20,12 @@ exports.config = {
     // then the current working directory is where your `package.json` resides, so `wdio`
     // will be called from there.
     //
+    suites: {
+
+        debitCard:['test/specs/uiControls.js', 'test/specs/windowsFrames.js'],
+        creditCard:['test/specs/eCommerceE2E.js']
+
+    },
     specs: [
         './test/specs/**/*.js'
     ],
@@ -71,6 +77,8 @@ exports.config = {
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'silent',
+
+   
     //
     // Set specific log levels per logger
     // loggers:
@@ -94,7 +102,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'https://www.rahulshettyacademy.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -133,6 +141,12 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec'],
+
+
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverScreenshotsReporting: false,
+    }]],
 
 
     
@@ -220,8 +234,11 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: function(test, context, { error, result, duration, passed, retries }) {
+         if (error) {
+    browser.takeScreenshot();
+  }
+     },
 
 
     /**

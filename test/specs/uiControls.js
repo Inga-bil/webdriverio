@@ -44,7 +44,7 @@ describe('Ecommerce application', ()=>{
     it('Dynamic dropdown controls Smoke',() =>{
 
 
-        browser.url("https://www.rahulshettyacademy.com/AutomationPractice/")
+        browser.url("/AutomationPractice/")
 
         $("#autocomplete").setValue("ind")
         browser.pause(2000)

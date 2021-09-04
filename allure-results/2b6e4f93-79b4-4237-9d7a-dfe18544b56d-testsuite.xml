@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1630717150889' stop='1630717150891'>
+    <name>Page Object test</name>
+    <title>Page Object test</title>
+    <test-cases>
+        <test-case start='1630717150889' status='pending' stop='1630717150890'>
+            <name>Login page</name>
+            <title>Login page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1630717150890' status='pending' stop='1630717150890'>
+            <name>End to End test</name>
+            <title>End to End test</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
